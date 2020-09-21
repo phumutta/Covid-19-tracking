@@ -46,4 +46,4 @@ export const fetchCountries =async ()=>{
     } catch (error) {
         console.log(error)
     }
-}
+} 
