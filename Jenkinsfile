@@ -21,6 +21,10 @@ pipeline {
         stage('test'){
             steps{
                 sh 'ls'
+                script {
+                   def data = readFile(file: 'README.md')
+                   println(data)
+               }
             }
         }
       
