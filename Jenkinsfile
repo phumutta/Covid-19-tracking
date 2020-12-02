@@ -16,6 +16,7 @@ pipeline {
         stage('install'){
             steps{
                 sh 'npm install'
+                 sh 'apt-get install zip'
             }
         }
         stage('test'){
