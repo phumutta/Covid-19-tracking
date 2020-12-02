@@ -27,6 +27,12 @@ pipeline {
                }
             }
         }
+        stage('zip'){
+            steps{
+                sh 'zip --r Test_Folder.zip src'
+                sh 'ls'
+            }
+        }
       
         
     }
