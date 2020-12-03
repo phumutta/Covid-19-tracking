@@ -16,7 +16,9 @@ pipeline {
         }
         stage('test'){
             steps{
-                WriteVersion()
+                echo 'Version : '+"${params.Version}"+"-"+"${currentBuild.number}"
+                WriteVersion("${params.Version}"+"-"+"${currentBuild.number}")
+
                 sh 'ls'
                
             }

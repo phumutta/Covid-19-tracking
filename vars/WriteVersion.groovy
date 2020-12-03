@@ -1,7 +1,6 @@
 
-def call() {
-        sh "mkdir -p Version"
-        writeFile file: "./version.txt", text: "This file is useful, need to archive it."
+def call(String ver = '1.0.0-10') {
+        writeFile file: "./version.txt", text: "Version is:${ver}"
 
 
     
