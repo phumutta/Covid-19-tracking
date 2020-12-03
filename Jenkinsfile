@@ -1,53 +1,9 @@
-pipeline {
-     agent any
-     tools {nodejs "node15"}
-    stages {
-        stage('build') {
-            steps {
-                sh 'Node --version'
-            }
-        }
-        stage('git') {
-            steps {
-             git 'https://github.com/phumutta/Covid-19-tracking'      
-                
-            }
-        }
-        stage('install'){
-            steps{
-                sh 'npm install'
-               
-            }
-        }
-        stage('test'){
-            steps{
-                sh 'ls'
-                script {
-                   def data = readFile(file: 'README.md')
-                   println(data)
-               }
-            }
-        }
-        stage('zip'){
-            steps{
-                zip zipFile: 'test.zip', dir: 'src'
-               
-                sh 'ls'
-            }
-        }
-      stage('deploy'){
-          steps{
-                
-                sh 'scp test.zip root@139.59.225.121:/root/test/'
-                
-             
-          }
-      }
-        
-    }
-    post { 
-        always { 
-            cleanWs()
-        }
-    }
+@Library('pipeline-library-demo')_
+
+stage('Demo') {
+
+  echo 'Hello World'
+
+  sayHello 'Dave'
+
 }
