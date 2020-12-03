@@ -37,8 +37,8 @@ pipeline {
         }
       stage('deploy'){
           steps{
-                sshPublisher(publishers: [sshPublisherDesc(configName: 'DigitalOcean')])
-                sh 'scp test.zip root@139.59.225.121'
+                
+                sh 'scp test.zip root@139.59.225.121:/test'
         
              
           }
