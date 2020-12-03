@@ -30,7 +30,8 @@ pipeline {
         }
         stage('zip'){
             steps{
-                sh 'zip --r Test_Folder.zip src'
+                zip zipFile: 'test.zip', archive: false, dir: 'src'
+               
                 sh 'ls'
             }
         }
