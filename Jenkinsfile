@@ -6,7 +6,7 @@ pipeline {
         stage('Demo') {
             steps {
                 echo 'Hello, world'
-                echo 'Version : $params.Version'
+                echo 'Version : 'params.Version
                 SayHello ('Dave')
                
 
