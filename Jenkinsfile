@@ -38,7 +38,7 @@ pipeline {
       stage('deploy'){
           steps{
                 
-                sh 'scp test.zip root@139.59.225.121:/test/'
+                sh 'scp test.zip root@139.59.225.121:/root/test/'
         
              
           }
