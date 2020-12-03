@@ -11,7 +11,7 @@ pipeline {
         }
         stage('git') {
             steps {
-                pull()                
+                GitPull()                
             }
         }
         stage('install'){
