@@ -9,19 +9,14 @@ pipeline {
                 sh 'Node --version'
             }
         }
-        stage('git') {
+        stage('=====INIT=====') {
             steps {
                 GitPull()                
             }
         }
-        stage('install'){
-            steps{
-                sh 'npm install'
-               
-            }
-        }
         stage('test'){
             steps{
+                WriteVersion()
                 sh 'ls'
                
             }
