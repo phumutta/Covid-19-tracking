@@ -40,7 +40,7 @@ pipeline {
                 sshPublisher(publishers: [sshPublisherDesc(configName: 'DigitalOcean')])
                 sh 'scp test.zip root@139.59.225.121'
                 sh 'ssh root@139.59.225.121'
-             
+                sh 'cd root@139.59.225.121'
                 sh 'ls'
           }
       }
