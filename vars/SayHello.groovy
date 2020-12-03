@@ -7,6 +7,3 @@ def call(String name = 'human') {
                 
 }
 
-def pull(){
-    git 'https://github.com/phumutta/Covid-19-tracking'  
-}
