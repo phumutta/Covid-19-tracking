@@ -1,4 +1,4 @@
-package com.cleverbuilder
+package com.tozd
 
 class SampleClass {
    String name
