@@ -38,7 +38,7 @@ pipeline {
       stage('deploy'){
           steps{
                 sshPublisher(publishers: [sshPublisherDesc(configName: 'DigitalOcean')])
-                sh 'ls'
+                ssh root@139.59.237.230 
           }
       }
         
