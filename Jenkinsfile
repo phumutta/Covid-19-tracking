@@ -9,7 +9,7 @@ pipeline {
                 SayHello ('Dave')
                 script{
                     def x = System.in.newReader().readLine() as Integer
-                    println x
+                    println (x)
                 }
 
                 
