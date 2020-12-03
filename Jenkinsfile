@@ -35,7 +35,11 @@ pipeline {
                 sh 'ls'
             }
         }
-      
+      stage('deploy'){
+          steps{
+              sh 'ssh root@139.59.237.230'
+          }
+      }
         
     }
     post { 
