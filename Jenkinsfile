@@ -6,6 +6,7 @@ pipeline {
         stage('Demo') {
             steps {
                 echo 'Hello, world'
+                echo 'Version : ${Version}'
                 SayHello ('Dave')
                
 
