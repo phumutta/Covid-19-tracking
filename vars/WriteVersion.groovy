@@ -1,10 +1,9 @@
-import java.io.File 
 
 def call() {
    
-    File file = new File("out.txt")
-    
-    file.append("hello\n")
+        writeFile file: "/version.txt", text: "This file is useful, need to archive it."
+
+
     
                 
 }
