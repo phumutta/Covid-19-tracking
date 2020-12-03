@@ -9,7 +9,7 @@ pipeline {
                 sh 'Node --version'
             }
         }
-        stage('=====INIT=====') {
+        stage('Init') {
             steps {
                 GitPull()                
             }
