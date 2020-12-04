@@ -16,16 +16,14 @@ pipeline {
         }
         stage('test'){
             steps{
-                echo 'Version : '+"${params.Version}"+"-"+"${currentBuild.number}"
                 WriteVersion("${params.Version}"+"-"+"${currentBuild.number}")
 
-                sh 'ls'
                
             }
         }
         stage('zip'){
             steps{
-                zip zipFile: 'test.zip', dir: './work'
+                zip zipFile: 'test.zip', dir: './work  ./version.txt'
                
                 sh 'ls'
             }
