@@ -23,8 +23,7 @@ pipeline {
         }
         stage('zip'){
             steps{
-                zip zipFile: 'test.zip', dir: './work  ./version.txt'
-               
+                sh 'zip Build.zip ./work version.txt'               
                 sh 'ls'
             }
         }
